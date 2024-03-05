@@ -53,3 +53,20 @@ newObj2.name = 'wario';
 
 console.log('newObj2: ', newObj2); // spread 문법을 사용해서 새로운 객체로 만들었기 때문에 같은 객체를 가리키고 있지 않다. 참조가 끊겼다. 원본 배열이 수정되지 않는다.
 console.log('myObj: ', myObj); // 기존 값은 그대로 유지한다.
+
+// example3 . 함수
+
+const myFunction = () => {
+  return 0;
+};
+
+const newFunction = myFunction;
+
+console.log(`newFunction === myFunction : ${newFunction === myFunction}`); //true
+
+myFunction.concoler = () => {
+  console.log('im myFunction');
+};
+
+console.log(myFunction.concoler()); // im myFunction (console만 있으므로 undefined 도 반환)
+console.log(newFunction.concoler()); // 위와 동일 : 같은 콜스텍 주소를 참조하고 있기 때문.
