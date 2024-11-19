@@ -59,6 +59,8 @@ for (const i in myArray2) {
 // 3. [순서 문제]
 // for in으로 반복한 객체의 속성 순서는 보장되지 않는다.
 // 자바스크립트 엔진에 따라 순서 보장 여부가 다르다고 한다.
+// 참고 자료 : https://stackoverflow.com/questions/5525795/does-javascript-guarantee-object-property-order
+
 const obj = {
   a: 1,
   b: 2,
