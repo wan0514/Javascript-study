@@ -8,7 +8,7 @@ function example() {
   let count = 0;
 
   const increase = () => {
-    console.log(count);
+    console.log(++count);
   };
   return increase;
 }
