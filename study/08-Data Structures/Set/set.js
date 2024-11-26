@@ -15,3 +15,15 @@ const repetitiveFruits = ['apple', 'pear', 'apple', 'pear', 'plum', 'apple'];
 const uniqueFruits = new Set(repetitiveFruits);
 
 console.log(uniqueFruits); // Set(3) { 'apple', 'pear', 'plum' }
+
+uniqueFruits.add('a').add('b'); //add는 연속으로 사용 가능
+uniqueFruits.add('c', 'd', 'f', 'j'); // 하나의 인자만 받을 수 있음
+uniqueFruits.delete('apple');
+
+console.log(uniqueFruits);
+
+console.log(uniqueFruits.has('pear')); // 갖고 있는지 없는지 boolean 값 반환
+
+uniqueFruits.clear(); // set에 포함된 거 전부 삭제
+
+console.log(uniqueFruits); // {}
