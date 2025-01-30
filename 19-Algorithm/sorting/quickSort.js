@@ -89,3 +89,20 @@ function quickSort2(array) {
 }
 
 console.log(quickSort2([10, 11, 12, 13, 14, 15, 16]));
+
+// filter을 사용할 경우!
+
+function quickSort3(array) {
+  if (array.length <= 1) return array;
+
+  // 피벗을 중간값으로 선택
+  const pivotIndex = Math.floor(array.length / 2);
+  const pivot = array[pivotIndex];
+
+  let left = array.filter((item) => item < pivot);
+  let right = array.filter((item) => item > pivot);
+
+  return [...quickSort3(left), pivot, ...quickSort3(right)];
+}
+
+console.log(quickSort3([10, 11, 12, 13, 14, 15, 16]));
